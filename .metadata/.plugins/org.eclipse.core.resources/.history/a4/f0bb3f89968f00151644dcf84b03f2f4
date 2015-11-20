@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1448029988609" analysisTimestamp="1448029988632" release="">
+  <Project projectName="">
+    <Jar>P:\SourceTree\Calculator\Calculator\build\jar\HelloWorld.jar</Jar>
+    <AuxClasspathEntry>P:\SourceTree\Calculator\Calculator\lib\Regex.jar</AuxClasspathEntry>
+    <SrcDir>P:\SourceTree\Calculator\Calculator\src</SrcDir>
+  </Project>
+  <Errors errors="1" missingClasses="1">
+    <Error>
+      <ErrorMessage>File not found: filesystem:P:\SourceTree\Calculator\Calculator\lib\Regex.jar</ErrorMessage>
+    </Error>
+    <MissingClass>junit.framework.TestCase</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 20 Nov 2015 15:33:08 +0100" total_classes="4" referenced_classes="13" total_bugs="0" total_size="25" num_packages="2" java_version="1.8.0_65" vm_version="25.65-b01" cpu_seconds="4.26" clock_seconds="1.59" peak_mbytes="104.39" alloc_mbytes="1794.00" gc_seconds="0.01">
+    <PackageStats package="com.iia.app" total_bugs="0" total_types="2" total_size="9">
+      <ClassStats class="com.iia.app.OperandClass" sourceFile="&lt;Unknown&gt;" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.iia.app.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.iia.app.test" total_bugs="0" total_types="2" total_size="16">
+      <ClassStats class="com.iia.app.test.OperandClassTest" sourceFile="&lt;Unknown&gt;" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.iia.app.test.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="477" invocations="295" avgMicrosecondsPerInvocation="1619" maxMicrosecondsPerInvocation="346165" standardDeviationMircosecondsPerInvocation="20116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="66" invocations="12" avgMicrosecondsPerInvocation="5582" maxMicrosecondsPerInvocation="66101" standardDeviationMircosecondsPerInvocation="18247"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="54" invocations="13" avgMicrosecondsPerInvocation="4218" maxMicrosecondsPerInvocation="19055" standardDeviationMircosecondsPerInvocation="6308"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="36" invocations="259" avgMicrosecondsPerInvocation="142" maxMicrosecondsPerInvocation="10429" standardDeviationMircosecondsPerInvocation="672"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="35" invocations="45" avgMicrosecondsPerInvocation="777" maxMicrosecondsPerInvocation="5279" standardDeviationMircosecondsPerInvocation="1013"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="28" invocations="27" avgMicrosecondsPerInvocation="1044" maxMicrosecondsPerInvocation="19938" standardDeviationMircosecondsPerInvocation="3804"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="24" invocations="12" avgMicrosecondsPerInvocation="2053" maxMicrosecondsPerInvocation="22726" standardDeviationMircosecondsPerInvocation="6233"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="23" invocations="13" avgMicrosecondsPerInvocation="1834" maxMicrosecondsPerInvocation="12430" standardDeviationMircosecondsPerInvocation="3258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="22" invocations="13" avgMicrosecondsPerInvocation="1718" maxMicrosecondsPerInvocation="14590" standardDeviationMircosecondsPerInvocation="3840"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

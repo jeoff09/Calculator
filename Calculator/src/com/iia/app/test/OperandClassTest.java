@@ -1,13 +1,12 @@
 package com.iia.app.test;
 
+import com.iia.app.OperandClass;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.iia.app.OperandClass;
-import junit.framework.TestCase;
-
-public class OperandClassTest extends TestCase {
+public class OperandClassTest {
 
     @Before
     public void setUp() throws Exception {
@@ -20,45 +19,45 @@ public class OperandClassTest extends TestCase {
     @Test
     public void testAdd() {
 
-        int a = 0;
-        int b = 2;
+        int value1 = 0;
+        int value2 = 2;
 
-        int result = a + b;
+        int result = value1 + value2;
 
-        assertEquals(result, OperandClass.add(a, b));
+        Assert.assertEquals(result, OperandClass.add(value1,value2));
     }
 
     @Test
     public void testSubb() {
 
-        int a = 0;
-        int b = 2;
+        int value1 = 0;
+        int value2 = 2;
 
-        int result = a - b;
+        int result = value1 - value2;
 
-        assertEquals(result, OperandClass.sub(a, b));
+        Assert.assertEquals(result, OperandClass.sub(value1, value2));
     }
 
     @Test
     public void testMulti() {
 
-        int a = 0;
-        int b = 2;
+        int value1 = 0;
+        int value2 = 2;
 
-        int result = a * b;
+        int result = value1 * value2;
 
-        assertEquals(result, OperandClass.mul(a, b));
+        Assert.assertEquals(result, OperandClass.mul(value1, value2));
     }
 
     @Test
     public void testDiv() {
 
-        int a = 0;
-        int b = 2;
+        int value1 = 0;
+        int value2 = 2;
 
-        int result = a / b;
+        int result = value1 / value2;
 
-        assertEquals(result, OperandClass.div(a, b));
+        Assert.assertEquals(result, OperandClass.div(value1,value2));
     }
 
 }

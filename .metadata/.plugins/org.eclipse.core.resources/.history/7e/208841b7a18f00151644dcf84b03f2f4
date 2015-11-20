@@ -1,0 +1,65 @@
+package com.iia.app.test;
+
+import com.iia.app.OperandClass;
+import junit.framework.TestCase;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+
+
+public class OperandClassTest extends TestCase {
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void testAdd() {
+
+        int value1 = 0;
+        int value2 = 2;
+
+        int result = value1 + value2;
+
+        assertEquals(result, OperandClass.add(value1,value2));
+    }
+
+    @Test
+    public void testSubb() {
+
+        int value1 = 0;
+        int value2 = 2;
+
+        int result = value1 - value2;
+
+        assertEquals(result, OperandClass.sub(value1, value2));
+    }
+
+    @Test
+    public void testMulti() {
+
+        int value1 = 0;
+        int value2 = 2;
+
+        int result = value1 * value2;
+
+        assertEquals(result, OperandClass.mul(value1, value2));
+    }
+
+    @Test
+    public void testDiv() {
+
+        int value1 = 0;
+        int value2 = 2;
+
+        int result = value1 / value2;
+
+        assertEquals(result, OperandClass.div(value1,value2));
+    }
+
+}
