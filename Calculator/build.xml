@@ -70,7 +70,6 @@
 		</pmd>
 	</target>
     
-    	<property name="findbugs.home" value="P:\SourceTree\Calculator\Calculator\extra\findbugs-3.0.1" />
 	<property name="findbugs.home" value="extra/findbugs-3.0.1" />
 	    <target name="findbugs" depends="jar">
 	        <findbugs home="${findbugs.home}" output="xml" outputFile="build-report.xml">

@@ -6,22 +6,15 @@
 		<fileset dir="libs" includes="**/*.jar">
 		</fileset>
 	</path>
+
 	<taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
 	         classpath="extra/checkstyle-6.12.1-all.jar"/>
-	
-	
-	<taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask"/>
 
-	<target name="pmd">
-	    <pmd rulesetfiles="rulesets/java/design.xml">
-	        <formatter type="com.mycompany.MyRenderer" toFile="foo.html"/>
-	        <fileset dir="/path/to/java/src">
-	            <include name="**/*.java"/>
-	        </fileset>
-	    </pmd>
-	</target>
+	<taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask" 
+		classpath="extra/pmd-4.2.6.jar"/>
 
-	
+	<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"
+	classpath="extra/findbugs.jar"/>
 
 	<!--target-->
 	<target name="clean" description="plop">
@@ -47,6 +40,7 @@
 			</manifest>
 		</jar>
 	</target>
+
 	<target name="doc">
 		<mkdir dir="build/doc"/>
 		<javadoc
@@ -55,18 +49,35 @@
 			version="true"
 			use="true"
 			windowtitle="Api of Calculator Project">
-
 			<packageset dir="src" defaultexcludes="yes">
 				<include name="com/**"/>
 				<exclude name="com/iia/app/test/**"/>
 			</packageset>
 		</javadoc>
 	</target>
+
 	<target name="quality">
 		<mkdir dir="build/report"/>
 		<checkstyle config="extra/google_checks.xml">
 			<fileset dir="src" includes="**/*.java"/>
 		</checkstyle>
 	</target>
+
+	<target name="pmd">
+		<pmd rulesetfiles="basic">
+			<fileset dir="src" includes="**/*.java"/>
+			<formatter type="html" toFile="pmd_report.html" toConsole="true"/>
+		</pmd>
+	</target>
+    
+    	<property name="findbugs.home" value="extra/findbugs-3.0.1" />
+	<property name="findbugs.home" value="extra/findbugs-3.0.1" />
+	    <target name="findbugs" depends="jar">
+	        <findbugs home="${findbugs.home}" output="xml" outputFile="build-report.xml">
+	            <auxClasspath refid="classpath"/>
+	            <sourcePath path="src" />
+	            <class location="build/jar/helloWorld.jar" />
+	        </findbugs>
+	    </target>
 
 </project>
