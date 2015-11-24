@@ -1,0 +1,30 @@
+iia_job:
+    path:     /
+    defaults: { _controller: "iiaiia_projectBundle:Job:index" }
+
+iia_job_show:
+    path:     /{id}/show
+    defaults: { _controller: "iiaiia_projectBundle:Job:show" }
+
+iia_job_new:
+    path:     /new
+    defaults: { _controller: "iiaiia_projectBundle:Job:new" }
+
+iia_job_create:
+    path:     /create
+    defaults: { _controller: "iiaiia_projectBundle:Job:create" }
+    methods:  POST
+
+iia_job_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "iiaiia_projectBundle:Job:edit" }
+
+iia_job_update:
+    path:     /{id}/update
+    defaults: { _controller: "iiaiia_projectBundle:Job:update" }
+    methods:  [POST, PUT]
+
+iia_job_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "iiaiia_projectBundle:Job:delete" }
+    methods:  [POST, DELETE]

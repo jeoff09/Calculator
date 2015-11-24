@@ -1,0 +1,4 @@
+iiaiia.project_iia_job:
+    resource: "@iiaiia_projectBundle/Resources/config/routing/job.yml"
+    prefix:   /iia_job
+
